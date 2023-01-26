@@ -9,7 +9,7 @@ const { Server } = require("socket.io");
 const app = express();
 
 var corsOptions = {
-    origin: 'http://127.0.0.1:8080',
+    origin: '*',
     optionsSuccessStatus: 200
 }
 
