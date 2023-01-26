@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 const cors = require('cors');
 
 var corsOptions = {
-    origin: 'http://127.0.0.1:8080',
+    origin: '*',
     optionsSuccessStatus: 200
 }
 

@@ -6,12 +6,14 @@ const usersRoutes = require('./routes/usersRoutes');
 const path = require('path');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-
+const staticMdl=express.static(path.static(path.join(__dirname,'dist')));
 const app = express();
-
+app.use(staticMdl);
 app.use(express.static(path.join(__dirname, 'static')));
 
+app.use(staticMdl);
 
+app.use(express.static(path.join(__dirname,'static')));
 function getCookies(req) {
     if (req.headers.cookie == null) return {};      
 
